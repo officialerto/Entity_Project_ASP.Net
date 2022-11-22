@@ -4,47 +4,34 @@
 }
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <style>
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-
-        li {
-            float: left;
-        }
-
-            li a {
-                display: block;
-                color: white;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-            }
-
-                li a:hover {
-                    background-color: #111;
-                }
-    </style>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-    <ul>
-        <li><a href="#home">Entity Dersleri</a></li>
-        <li><a href="#news">Yetenek Listesi</a></li>
-        <li><a href="#contact">Yeni Yetenek</a></li>
-        <li><a href="#about">Siteye Git</a></li>
-    </ul>
-    <div>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Entity Dersleri</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="/Admin/Index/">Yetenek Listesi</a></li>
+                <li><a href="/Admin/YeniYetenek/">Yeni Yetenek</a></li>
+                <li><a href="/Default/Index/">Siteye Git</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
         @RenderBody()
     </div>
+
 </body>
 </html>
-
-
 
